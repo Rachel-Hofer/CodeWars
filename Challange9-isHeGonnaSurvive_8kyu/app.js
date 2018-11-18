@@ -1,3 +1,4 @@
+// Instructions
 // A hero is on his way to the castle to complete his mission. 
 // However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated.
 // Our hero has no idea how many bullets he should carry.. 
@@ -13,3 +14,9 @@ function hero(bullets, dragons){
     return false
     }
   }
+
+  // Best Practice:
+
+  // function hero(bullets, dragons){
+  //   return bullets >= dragons * 2
+  // }
