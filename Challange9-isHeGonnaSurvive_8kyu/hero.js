@@ -1,4 +1,5 @@
-// Instructions
+// Instructions:
+
 // A hero is on his way to the castle to complete his mission. 
 // However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated.
 // Our hero has no idea how many bullets he should carry.. 
@@ -6,6 +7,8 @@
 // will he survive?
 // Return True if yes, False otherwise :)
 
+
+// My Answer:
 
 function hero(bullets, dragons){
     if((bullets/2) >= dragons){
@@ -15,8 +18,9 @@ function hero(bullets, dragons){
     }
   }
 
-  // Best Practice:
 
-  // function hero(bullets, dragons){
-  //   return bullets >= dragons * 2
-  // }
+// Best Practice:
+
+// function hero(bullets, dragons){
+//   return bullets >= dragons * 2
+// }

@@ -1,4 +1,5 @@
 // Instructions:
+
 // After a hard quarter in the office you decide to get some rest on a vacation. 
 // So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
 // You will need a rental car in order for you to get around in your vacation. 
@@ -7,6 +8,8 @@
 // Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
 // Write a code that gives out the total amount for different days(d).
 
+
+// My Answer:
 
 let days = 1;
 
@@ -27,6 +30,7 @@ function rentalCarCost(days) {
 
 
 // Best Practice:
+
 // function baseCost(days, rate) {
 //   return days * rate;
 // }
