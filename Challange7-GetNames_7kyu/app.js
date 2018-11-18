@@ -20,3 +20,8 @@ function getNames(data){
         return output
       }
 
+
+      // Best Practice:
+      // function getNames(data){
+      //   return data.map(function(item){return item.name});
+      // }
