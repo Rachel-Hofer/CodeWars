@@ -5,9 +5,7 @@
 // The inputs to your function will always be non-negative integers.
 
 
-// My Answer:
-
-// var lastDigit = function(str1, str2){  
+// My Answer: Passes only 5 out of 9 tests
 
     function lastDigit(str1, str2){
         var num = Math.pow(str1, str2);
@@ -23,9 +21,13 @@
     
     }
     
-    let str1 = 10;
-    let str2 = 10000000000;
+    let str1 = 7;
+    let str2 = 3;
     lastDigit(str1, str2)
     
     
     // Best Practice:
+
+    // var lastDigit = function(str1, str2){  
+    //     return +!+str2 || Math.pow(str1.slice(-1) % 10, str2.slice(-2) % 4 || 4) % 10
+    // }
