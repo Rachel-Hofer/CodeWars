@@ -6,28 +6,41 @@
 // If a string contains all repeating characters, it should return None.
 
 
-// My Answer:
+// Original Thought Process:
+
+// function firstNonRepeatingLetter(str) {
+//     let discard = [];
+
+//   for(let i = 0; i <= str.length; i++){
+//     console.log("IIIIIIIII", i)
+  
+//         discard.push(i)
+//         console.log(discard)
+      
+//   }
+// }
+
+// Final Submission:
+
 function firstNonRepeatingLetter(str) {
-    let discard = [];
-
-  for(let i = 0; i <= str.length; i++){
-    console.log("IIIIIIIII", i)
-    for(let j = 1; j < str.length; j++){
-        console.log("JJJJJJJJJ", j)
-      if(i === j){
-
-        discard.push(i)
-        console.log(discard)
-      }
-      else {
-        return i
-      }
+    let string = str.toLowerCase();
+    for(let i = 0; i < str.length; ++i) {
+      if(string.split(str[i]).length === 2) return str[i];
     }
+    return '';
   }
-}
-
-firstNonRepeatingLetter('moonmen')
-
-
-
-// Best Practice:
+  
+  firstNonRepeatingLetter("moonmen")
+  
+  
+  
+  // Best Practice:
+  
+  // function firstNonRepeatingLetter(s) {
+  //   for(var i in s) {
+  //     if(s.match(new RegExp(s[i],"gi")).length === 1) {
+  //       return s[i];
+  //     }
+  //   }
+  //   return '';
+  // }
