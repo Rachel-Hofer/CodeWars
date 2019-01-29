@@ -21,8 +21,22 @@
 // My Answer:
 
 function replaceNounPhrases(sentence, pronouns, dictionary) {
-
-
+    var words = sentence.split(" ");
+    var auxIndex = -1;
+    var pronounIndex = 0;
+    for (var i = 0; i < words.length; i++) {
+        if (!(words[i] in dictionary)) {
+            auxIndex = -1;
+        } else if (dictionary[words[i]] === "aux") {
+            auxIndex = i;
+        } else if (dictionary[words[i]] === "N" && auxIndex !== -1) {
+            words.splice(auxIndex, i - auxIndex + 1, pronouns[pronounIndex]);
+            pronounIndex++;
+            auxIndex = -1;
+            i = auxIndex;
+        }
+    }
+    return words.join(" ");
 }
 
 let sentence = "a girl ate the cookie";
@@ -40,4 +54,16 @@ let dictionary = {
 replaceNounPhrases(sentence, pronouns, dictionary);
 
 
-// Best Practice:
+  // Best Practice:
+
+  // function replaceNounPhrases(sentence, pronouns, dictionary){
+  //   let N = Object.entries(dictionary).filter(el => el[1] === "N").map(el=>el[0]).join("|")
+  //   let adj = Object.entries(dictionary).filter(el => el[1] === "adj").map(el=>el[0]).join("|")
+  //   let aux = Object.entries(dictionary).filter(el => el[1] === "aux").map(el=>el[0]).join("|")
+
+  //   let regexp = new RegExp(`(${aux}) ((${adj}) )*(${N})`,"ig")
+
+  //   let string = sentence.replace(regexp, match => pronouns.shift())
+
+  //   return string
+  // }
